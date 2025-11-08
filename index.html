@@ -52,7 +52,32 @@
       }
       button:hover {
         background-color: #5dbb5d;
-        transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+        transition: background-color 180m ease;
+      }
+      @media (max-width: 480px) {
+        form {
+          flex-direction: column;
+          gap: 10px;
+        }
+        button {
+          width: 100%;
+          font-size: 18px;
+          padding: 12px;
+        }
+      }
+      @media (max-width: 700px) {
+        body {
+          padding: 40px;
+        }
+        .container {
+          padding: 50px;
+          margin: 120px;
+          max-width: 460px;
+        }
+        button {
+          font-size: 22px;
+          padding: 12px 16px;
+        }
       }
     </style>
   </head>
@@ -61,7 +86,7 @@
       <h1>Palindrone Checker</h1>
       <form action="">
         <input id="input" type="text" placeholder="Type Something..." />
-        <button>Check</button>
+        <button onclick="check()">Check</button>
       </form>
     </div>
     <script src="scripts.js"></script>
