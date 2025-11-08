@@ -5,7 +5,8 @@ function reverstring(str) {
 }
 
 function check() {
-  const value = input.value;
+  const raw = input.value || "";
+  const value = raw.toLowerCase().trim();
   const reversed = reverstring(value);
 
   if (value === reversed) {
